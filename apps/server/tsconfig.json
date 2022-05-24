@@ -1,7 +1,5 @@
 {
   "extends": "../../tsconfig.base.json",
-  "files": [],
-  "include": [],
   "references": [
     {
       "path": "./tsconfig.app.json"
@@ -9,5 +7,36 @@
     {
       "path": "./tsconfig.spec.json"
     }
+  ],
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "src"
+  },
+  "include": [
+    "src",
+  ],
+  "typeRoots": [
+    "./src/types",
+    "node_modules/@types"
+  ],
+  "files": [
+    "./node_modules/@types/node/index.d.ts"
   ]
 }

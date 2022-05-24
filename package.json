@@ -5,7 +5,9 @@
   "scripts": {
     "start:admin": "nx serve admin",
     "start:server": "nx serve server",
+    "start": "nx run-many --target=serve --projects=admin,server",
     "build": "nx build",
+    "build-all": "nx affected:build --all --watch --parallel --maxParallel=100",
     "test": "nx test"
   },
   "private": true,
@@ -13,7 +15,12 @@
     "@ant-design/icons": "^4.7.0",
     "antd": "^4.20.6",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "express": "4.17.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.3.4",
+    "morgan": "^1.10.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "regenerator-runtime": "0.13.7",
