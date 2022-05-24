@@ -10,6 +10,8 @@
   },
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "antd": "^4.20.6",
     "core-js": "^3.6.5",
     "express": "4.17.2",
     "react": "18.1.0",
