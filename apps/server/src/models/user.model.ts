@@ -1,6 +1,6 @@
 
-import * as mongoose from "mongoose";
-import * as crypto from "crypto";
+import mongoose from "mongoose";
+import crypto from "crypto";
 
 const userSchema = new mongoose.Schema(
   {
@@ -86,11 +86,11 @@ userSchema.methods = {
 
   makeUserName: function (full_name) {
     const splitName = full_name.split(' ');
-    let hovatendem = splitName.reduce((first, last) => {
+    const hoVaTenDem = splitName.reduce((first, last) => {
       first += last[0];
       return first;
     }, "");
-    const userName = splitName[splitName.length - 1] + hovatendem.slice(0, -1)
+    const userName = splitName[splitName.length - 1] + hoVaTenDem.slice(0, -1)
     return userName;
   },
 

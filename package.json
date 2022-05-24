@@ -5,7 +5,9 @@
   "scripts": {
     "start:admin": "nx serve admin",
     "start:server": "nx serve server",
+    "start": "nx run-many --target=serve --projects=admin,server",
     "build": "nx build",
+    "build-all": "nx affected:build --all --watch --parallel --maxParallel=100",
     "test": "nx test"
   },
   "private": true,

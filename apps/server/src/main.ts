@@ -2,17 +2,15 @@
  * This is not a production server yet!
  * This is only a minimal backend to get started.
  */
-require("dotenv").config();
-import * as express from 'express';
-import * as morgan from 'morgan';
-import * as expressSession from "express-session";
-import * as cors from "cors";
-
-const db = require('./helpers/db');
-
+import dotenv from "dotenv";
+import express from "express"
+import morgan from 'morgan';
+import expressSession from "express-session";
+import cors from "cors";
+import { ConnectMongoose } from "../src/helper/db"
+dotenv.config();
 const app = express();
-
-db.Connect();
+ConnectMongoose()
 
 app.use(morgan("dev"));
 app.set('trust proxy', 1);
@@ -22,7 +20,7 @@ app.use(expressSession({
   secret: process.env.SECRET_SESSION || "SECRET_SESSION",
   resave: false,
   saveUninitialized: true
-}))
+}));
 
 if (process.env.NODE_ENV === "development") {
   app.use(
