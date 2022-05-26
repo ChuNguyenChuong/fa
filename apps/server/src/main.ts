@@ -8,6 +8,10 @@ import morgan from 'morgan';
 import expressSession from "express-session";
 import cors from "cors";
 import { ConnectMongoose } from "../src/helper/db"
+import authRoutes from "./routes/auth.routes"
+import globalErrorHandler from "./middlewares/error.middleware"
+const port = process.env.PORT || 3333;
+
 dotenv.config();
 const app = express();
 ConnectMongoose()
@@ -30,11 +34,15 @@ if (process.env.NODE_ENV === "development") {
   );
 }
 
-app.get('/api', (req, res) => {
-  res.send({ message: 'Welcome to server!' });
+app.use("/api/auth", authRoutes);
+app.use(globalErrorHandler);
+app.get("*", function (req, res) {
+  res.status(400).send({
+    code: 404,
+    message: 'Nothing in here !!!'
+  });
 });
 
-const port = process.env.PORT || 3333;
 const server = app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}/api`);
 });
