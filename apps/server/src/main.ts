@@ -10,6 +10,9 @@ import cors from "cors";
 import { ConnectMongoose } from "../src/helper/db"
 import authRoutes from "./routes/auth.routes"
 import globalErrorHandler from "./middlewares/error.middleware"
+import swaggerUi from "swagger-ui-express";
+import swaggerDocument from "./swagger.json"
+
 const port = process.env.PORT || 3333;
 
 dotenv.config();
@@ -34,13 +37,12 @@ if (process.env.NODE_ENV === "development") {
   );
 }
 
+app.use('/api-docs', swaggerUi.serve);
+app.get('/api-docs', swaggerUi.setup(swaggerDocument));
 app.use("/api/auth", authRoutes);
 app.use(globalErrorHandler);
 app.get("*", function (req, res) {
-  res.status(400).send({
-    code: 404,
-    message: 'Nothing in here !!!'
-  });
+  res.redirect("/api-docs/")
 });
 
 const server = app.listen(port, () => {

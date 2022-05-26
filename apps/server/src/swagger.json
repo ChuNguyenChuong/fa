@@ -1,0 +1,94 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "FA system",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/auth/login": {
+      "post": {
+        "tags": ["auth"],
+        "summary": "Login",
+        "description": "Login action",
+        "operationId": "login",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request JSON payload",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "code": "200",
+            "message": "Login Success !!!",
+            "token": "token"
+          },
+          "400": {
+            "code": "400",
+            "message": "bad request !!!"
+          }
+        }
+      }
+    },
+    "/api/auth/signup": {
+      "post": {
+        "tags": ["auth"],
+        "summary": "signup",
+        "description": "signup action",
+        "operationId": "signup",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Request JSON payload",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "full_name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "confirm_password": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "code": "200",
+            "message": "Login Success !!!",
+            "token": "token"
+          },
+          "400": {
+            "code": "400",
+            "message": "bad request !!!"
+          }
+        }
+      }
+    }
+  },
+  "consumes": ["application/json"]
+}
