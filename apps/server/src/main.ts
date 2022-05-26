@@ -23,6 +23,7 @@ app.use(morgan("dev"));
 app.set('trust proxy', 1);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/api-docs', swaggerUi.serve);
 app.use(expressSession({
   secret: process.env.SECRET_SESSION || "SECRET_SESSION",
   resave: false,
@@ -37,7 +38,6 @@ if (process.env.NODE_ENV === "development") {
   );
 }
 
-app.use('/api-docs', swaggerUi.serve);
 app.get('/api-docs', swaggerUi.setup(swaggerDocument));
 app.use("/api/auth", authRoutes);
 app.use(globalErrorHandler);
