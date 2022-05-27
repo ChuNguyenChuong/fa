@@ -41,3 +41,8 @@
   justify-content: center;
   gap: 40px;
 }
+.link-sign {
+  font-weight: 500;
+  color: #000000;
+  font-size: 1.2rem;
+}

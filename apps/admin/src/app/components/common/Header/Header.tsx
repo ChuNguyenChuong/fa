@@ -4,6 +4,7 @@ import { Images } from 'apps/admin/src/assets/Images';
 import React from 'react';
 import { Select } from 'antd';
 import './Header.css';
+import { NavLink } from 'react-router-dom';
 
 const { Option } = Select;
 export const HeaderLayout = () => {
@@ -18,7 +19,7 @@ export const HeaderLayout = () => {
             height={45}
             className="logo-img"
           />
-          <Typography.Link style={{ color: '#000000' }}>
+          <Typography.Link style={{ color: '#000000', fontWeight: 600 }}>
             Room Meeting
           </Typography.Link>
           <Button children={'Dashboard'} className="logo-btn" type="primary" />
@@ -31,18 +32,14 @@ export const HeaderLayout = () => {
             </Select>
           </div>
 
-          <div className="auth-btn">
-            <Button
-              children={'SignIn'}
-              type="link"
-              style={{ color: '#000000' }}
-            />
+          <div className="auth-link">
+            <NavLink to={'/signin'} className="link-sign">
+              SignIn
+            </NavLink>
             <Divider type="vertical" style={{ height: '62px' }} />
-            <Button
-              children={'SignUp'}
-              type="link"
-              style={{ color: '#000000' }}
-            />
+            <NavLink to={'/signup'} className="link-sign">
+              SignUp
+            </NavLink>
           </div>
         </div>
       </div>
