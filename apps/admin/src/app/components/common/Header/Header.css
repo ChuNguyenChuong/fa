@@ -1,0 +1,48 @@
+#header {
+}
+.ant-layout-header {
+  height: 64px;
+  padding: 0 50px;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 64px;
+  background: #ffffff;
+  /* opacity: 0.6; */
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-icon {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.logo-img {
+  object-fit: cover;
+}
+.logo-btn,
+.logo-btn:focus {
+  width: 180px !important;
+  height: inherit;
+  background-image: linear-gradient(to top right, #fc982f, #fd7285);
+  color: #fff;
+  border-color: #fd7285;
+  background-image: linear-gradient(to top right, #fc982f, #fd7285);
+}
+.logo-btn:hover {
+  color: #fff;
+  border-color: #fd7285;
+  background-image: linear-gradient(to top right, #fc982f, #fd7285);
+  opacity: 0.7;
+}
+.auth {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.link-sign {
+  font-weight: 500;
+  color: #000000;
+  font-size: 1.2rem;
+}

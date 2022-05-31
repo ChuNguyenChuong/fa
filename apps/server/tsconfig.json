@@ -10,11 +10,7 @@
   ],
   "compilerOptions": {
     "target": "es2015",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "isolatedModules": true,
     "allowJs": true,
     "skipLibCheck": true,
@@ -29,14 +25,7 @@
     "jsx": "react-jsx",
     "baseUrl": "src"
   },
-  "include": [
-    "src",
-  ],
-  "typeRoots": [
-    "./src/types",
-    "node_modules/@types"
-  ],
-  "files": [
-    "./node_modules/@types/node/index.d.ts"
-  ]
+  "include": ["src"],
+  "typeRoots": ["./src/types", "node_modules/@types"],
+  "files": ["./node_modules/@types/node/index.d.ts"]
 }
