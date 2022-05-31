@@ -2145,9 +2145,9 @@
   dependencies:
     "source-map-support" "^0.5.21"
 
-"@swc/core-darwin-x64@1.2.194":
-  "integrity" "sha512-WLFhotRbGqMKg9HwB0RF0Ycz6B6uSMEHcblAdBhiyL4fIp+CMUhkvC8jTs0xij/yJj96B6Xf9UH/Q5MFUQrJEw=="
-  "resolved" "https://registry.npmjs.org/@swc/core-darwin-x64/-/core-darwin-x64-1.2.194.tgz"
+"@swc/core-win32-x64-msvc@1.2.194":
+  "integrity" "sha512-c3tiShCGY03XbJqXpliHRHMBBB/KGWS1kcbKn2GhaZN4fY8UgD5kZk3XJDwDJ6oqwlgkBdWXRAgD5Td2aAKMRg=="
+  "resolved" "https://registry.npmjs.org/@swc/core-win32-x64-msvc/-/core-win32-x64-msvc-1.2.194.tgz"
   "version" "1.2.194"
 
 "@swc/core@^1.2.172", "@swc/core@^1.2.173":
@@ -5471,11 +5471,6 @@
   "integrity" "sha1-FQStJSMVjKpA20onh8sBQRmU6k8="
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
-
-"fsevents@^2.3.2", "fsevents@~2.3.2":
-  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
-  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
-  "version" "2.3.2"
 
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="

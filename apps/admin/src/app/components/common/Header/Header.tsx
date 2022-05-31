@@ -33,12 +33,12 @@ export const HeaderLayout = () => {
           </div>
 
           <div className="auth-link">
-            <NavLink to={'/signin'} className="link-sign">
-              SignIn
+            <NavLink to={'/auth/login'} className="link-sign">
+              Login
             </NavLink>
             <Divider type="vertical" style={{ height: '62px' }} />
-            <NavLink to={'/signup'} className="link-sign">
-              SignUp
+            <NavLink to={'/auth/signup'} className="link-sign">
+              Register
             </NavLink>
           </div>
         </div>

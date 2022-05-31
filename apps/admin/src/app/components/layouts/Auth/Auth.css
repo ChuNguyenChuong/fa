@@ -63,13 +63,13 @@ body.active-modal {
 .login-form {
   line-height: 1.4;
   background: white;
-  padding: 14px 28px;
+  /* padding: 14px 28px; */
+  padding: 40px;
   border-radius: 8px;
-  max-width: 500px;
-  min-width: 300px;
+  width: 350px;
   display: grid;
   align-content: center;
-  margin-right: 40px;
+  /* margin-right: 40px; */
 }
 
 .login-form label,
